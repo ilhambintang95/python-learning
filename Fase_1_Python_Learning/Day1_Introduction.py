@@ -14,7 +14,18 @@ print(4//3) #floordivisionoperator digunakan untuk melakukan pembagian dan langs
 
 #Fungsi Matematika
 
-#round(x, n) Membulatkan angka x ke bilangan terdekat atau sejumlah n angka di belakang koma
+#round(x, n) digunakan untuk membulatkan angka x ke bilangan terdekat atau sejumlah n angka di belakang koma
 print(round(3/4, 1)) #3/4 adalah 0.75. Apabila n 0 maka dibulatkan ke angka bulat terdekat yaitu 1, apabila n 1 maka dibulatkan ke angka belakang koma terdekat yaitu 0.8 dst
 print(round(4/3, 1)) #4/3 adalah 1.3333.... Apabila n 0 maka dibulatkan ke angka bulat terdekat yaitu 1, apabila n 1 maka dibulatkan ke angka belakang koma terdekat yaitu 1.3 dst
 
+#abs(x) digunakan untuk mengubah angka negatif menjadi positif (nilai mutlak)
+print(abs(-3))   #mengubah angka -3 menjadi 3
+print(abs(-4))   #mengubah angka -4 menjadi 4
+
+#pow(x, y) digunakan untuk menghitung perpangkatan sama seperti **, x pangkat y
+print(pow(3, 4))    #3 pangkat 4 adalah 81
+print(pow(4, 3))    #4 pangkat 3 adalah 64
+
+#divmod(x, y) digunakan sebagai bentuk pengganti (//) untuk x dan (%) untuk y.
+print(divmod(3, 4)) #untuk x adalah 3//4 yaitu 0 dan untuk y adalah 3%4 yaitu 3
+print(divmod(4, 3)) #untuk x adalah 4//3 yaitu 1 dan untuk y adalah 4%3 yaitu 1
