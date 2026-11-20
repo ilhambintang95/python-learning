@@ -106,3 +106,30 @@ import math
 euclidean_distance = math.sqrt(((q1-p1)**2)+((q2-p2)**2))
 print(euclidean_distance)
 
+import math
+import matplotlib.pyplot as plt
+
+# 1. Tentukan koordinat titik P dan Q
+p1, p2 = 2, 3
+q1, q2 = 5, 7
+
+# 2. Hitung jarak menggunakan rumus Anda
+jarak = math.sqrt(((q1 - p1) ** 2) + ((q2 - p2) ** 2))
+
+# 3. Gambar garis utama (jarak d) dan garis bantu (segitiga siku-siku)
+plt.plot([p1, q1], [p2, q2], marker='o', color='blue', linewidth=2, label=f'Jarak d = {jarak}')
+plt.plot([p1, q1, q1], [p2, p2, q2], linestyle='--', color='gray', label='Selisih sumbu X & Y')
+
+# 4. Beri label teks pada titik P dan Q
+plt.text(p1, p2 - 0.4, f'P({p1}, {p2})', fontsize=11, fontweight='bold')
+plt.text(q1, q2 + 0.2, f'Q({q1}, {q2})', fontsize=11, fontweight='bold')
+
+# 5. Atur tampilan grid, judul, dan tampilkan grafik
+plt.title('Grafik Jarak Euclidean Antara Dua Titik')
+plt.xlabel('Sumbu X (p1, q1)')
+plt.ylabel('Sumbu Y (p2, q2)')
+plt.xlim(0, 7)
+plt.ylim(0, 9)
+plt.grid(True)
+plt.legend()
+plt.show()
