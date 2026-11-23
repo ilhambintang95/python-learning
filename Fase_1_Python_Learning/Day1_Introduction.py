@@ -41,7 +41,7 @@ nationality = "Indonesia"
 age = 31
 price = 123456.789
 
-#f-string
+#f-string untuk menyisipkan nilai variabel atau perhitungan langsung ke dalam teks dengan lebih ringkas dan rapi.
 print(f"My name is {name}, I lived in {nationality}, and I am {age} years old.") # digunakan untuk menambahkan format penulisan (,), (.), operasi matematika, fungsi, format angka, dll.
 print(f"I was born in {nationality}.")
 print(f"4 years later i will be {age+4} years old.")
@@ -106,30 +106,20 @@ import math
 euclidean_distance = math.sqrt(((q1-p1)**2)+((q2-p2)**2))
 print(euclidean_distance)
 
+print(profile)
+
+#radius circle is 30 meters
 import math
-import matplotlib.pyplot as plt
 
-# 1. Tentukan koordinat titik P dan Q
-p1, p2 = 2, 3
-q1, q2 = 5, 7
+rad = 30
+area_of_circle = math.pi*(rad**2)
+circum_of_circle = math.pi*2*rad
 
-# 2. Hitung jarak menggunakan rumus Anda
-jarak = math.sqrt(((q1 - p1) ** 2) + ((q2 - p2) ** 2))
+print(f"Area of Circle = {area_of_circle:.2f}m\u00b2")
+print(f"Circumferences of Circle = {circum_of_circle:.2f} metres")
 
-# 3. Gambar garis utama (jarak d) dan garis bantu (segitiga siku-siku)
-plt.plot([p1, q1], [p2, q2], marker='o', color='blue', linewidth=2, label=f'Jarak d = {jarak}')
-plt.plot([p1, q1, q1], [p2, p2, q2], linestyle='--', color='gray', label='Selisih sumbu X & Y')
+print("-"*40)
 
-# 4. Beri label teks pada titik P dan Q
-plt.text(p1, p2 - 0.4, f'P({p1}, {p2})', fontsize=11, fontweight='bold')
-plt.text(q1, q2 + 0.2, f'Q({q1}, {q2})', fontsize=11, fontweight='bold')
-
-# 5. Atur tampilan grid, judul, dan tampilkan grafik
-plt.title('Grafik Jarak Euclidean Antara Dua Titik')
-plt.xlabel('Sumbu X (p1, q1)')
-plt.ylabel('Sumbu Y (p2, q2)')
-plt.xlim(0, 7)
-plt.ylim(0, 9)
-plt.grid(True)
-plt.legend()
-plt.show()
+defined_rad = float(input("Radius of the circle (metre): "))
+user_area = math.pi*(defined_rad**2)
+print(f"Area of circle with Radius {defined_rad} m = {user_area:.2f}m\u00b2")
